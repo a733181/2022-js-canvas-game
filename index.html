@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2022-jq-canvas-memory-game</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="start-container">
+        <div class="illustrate-container">
+          <div class="illustrate-content">
+            <h2>遊戲說明：</h2>
+            <p></p>
+            <div>
+              <span>透過鍵盤</span>
+              <img
+                src="./src/img/icons/arrow-up-solid.svg"
+                alt="up"
+                class="icons illustrate-icon-up"
+              />
+              <img
+                src="./src/img/icons/arrow-down-solid.svg"
+                alt="down"
+                class="icons illustrate-icon-down"
+              />
+              <span>按鍵移動角色</span>
+            </div>
+            <div>
+              <span>透過按鍵</span>
+              <img
+                src="./src/img/icons/f-solid.svg"
+                alt="f"
+                class="icons illustrate-icon-f"
+              />
+              <span>攻擊怪物</span>
+              <img
+                src="./src/img/obstacle/L1_block_2.png"
+                class="illustrate-img"
+              />
+              <img
+                src="./src/img/obstacle/L2_block_2.png"
+                class="illustrate-img"
+              />
+              <span>獲得分數</span>
+            </div>
+            <div>
+              <span>並閃躲障礙物</span>
+              <img
+                src="./src/img/obstacle/L1_block_1.png"
+                class="illustrate-img"
+              />
+              <img
+                src="./src/img/obstacle/L2_block_1.png"
+                class="illustrate-img"
+              />
+            </div>
+            <div>
+              <p>撞到怪物及障礙物會扣取生命值</p>
+            </div>
+          </div>
+          <button type="button" class="btn illustrate-btn">確定</button>
+        </div>
+        <div class="select-user">
+          <h1 class="select-title">選擇角色</h1>
+          <form class="select-form">
+            <div class="select-group">
+              <input
+                type="radio"
+                name="select"
+                value="0"
+                id="user1"
+                class="select-radio"
+                checked
+              />
+              <label for="user1" class="select-lable">
+                <img
+                  src="./src/img/role/archer.png"
+                  alt="archer"
+                  class="select-img"
+                />
+              </label>
+              <input
+                type="radio"
+                name="select"
+                value="1"
+                id="user2"
+                class="select-radio"
+              />
+              <label for="user2" class="select-lable">
+                <img
+                  src="./src/img/role/Knight.png"
+                  alt="archer"
+                  class="select-img"
+                />
+              </label>
+              <input
+                type="radio"
+                name="select"
+                value="2"
+                id="user3"
+                class="select-radio"
+              />
+              <label for="user3" class="select-lable">
+                <img
+                  src="./src/img/role/wizard.png"
+                  alt="archer"
+                  class="select-img"
+                />
+              </label>
+            </div>
+            <button type="submit" class="btn select-button">開始遊戲</button>
+          </form>
+        </div>
+      </div>
+      <canvas class="canvas none"></canvas>
+      <div class="end-container none">
+        <h2 class="end-title"></h2>
+        <img src="" class="end-img none" />
+        <p>得了 <span class="end-score"></span> 分</p>
+        <div>
+          <button type="button" class="btn restart">重新開始</button>
+          <button type="button" class="btn back-select">回到選單</button>
+        </div>
+      </div>
+    </div>
+    <script src="./src/index.js"></script>
+  </body>
+</html>

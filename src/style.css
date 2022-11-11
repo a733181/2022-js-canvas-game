@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Stick', sans-serif;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+.icons {
+  width: 30px;
+  border: 1px solid white;
+  padding: 2px 5px;
+  box-shadow: 1px 1px 0px white;
+}
+.btn {
+  background: url('./img/button/button.png');
+  width: 107px;
+  height: 49px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 49px;
+  color: white;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+.btn:hover {
+  top: 2px;
+}
+.btn:active {
+  top: 5px;
+}
+
+/* illustrate */
+.illustrate-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  color: white;
+  padding: 30px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.illustrate-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.illustrate-icon-up {
+  position: relative;
+  animation: moveTop 0.8s linear infinite;
+}
+.illustrate-icon-down {
+  position: relative;
+  animation: moveTop 0.8s linear 0.5s infinite;
+}
+.illustrate-icon-f {
+  position: relative;
+  animation: moveTop 0.8s linear 0.8s infinite;
+}
+
+@keyframes moveTop {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 5px;
+  }
+}
+
+.illustrate-img {
+  width: 50px;
+}
+
+/* select */
+.select-user {
+  background-color: #fff;
+  width: 1000px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+.select-title {
+  margin-top: 30px;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.select-group {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-bottom: 60px;
+}
+
+.select-radio {
+  display: none;
+}
+
+.select-radio:checked + .select-lable {
+  background-color: gray;
+}
+
+.select-lable {
+  width: 20%;
+  border-radius: 10px;
+  padding: 50px;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.3);
+}
+.select-lable:hover {
+  background-color: gray;
+}
+
+.select-img {
+  width: 100%;
+}
+
+/* game */
+.canvas {
+  width: 1000px;
+  height: 700px;
+  border: 5px solid black;
+}
+
+.end-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+}
+
+.end-img {
+  width: 150px;
+}
+
+.none {
+  display: none;
+}
